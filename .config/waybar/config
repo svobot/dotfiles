@@ -1,0 +1,96 @@
+// vi: ft=json
+{
+    "layer": "top",
+    "height": 25,
+    
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "pulseaudio", "network#internet", /*"network#vpn",*/ "battery", "clock", "custom/power"],
+    
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+	"interval" : 1,
+        "format": "{:%A    %Y-%m-%d    %X}",
+	"tooltip-format": "<big>{:%B}</big>\n<span font-family=\"IBM Plex Mono\">{calendar}</span>"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  <span foreground=\"#26A65B\"></span>",
+        "format-plugged": "",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network#internet": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "",
+        "format-disconnected": "⚠",
+        "tooltip-format-wifi": "{essid}:\t{signalStrength}%\n{ifname}:\t{ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "{ifname}:   {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+//    "network#vpn": {
+//        "interface": "wg0",
+//        "format": "",
+//        "format-disconnected": "",
+//        "tooltip-format": "{ifname}:   {ipaddr}/{cidr}"
+//    },
+    "pulseaudio": {
+        "format": "{volume}%  {icon}  {format_source}",
+        "format-bluetooth": "{volume}%  {icon}    {format_source}",
+        "format-bluetooth-muted": "   {icon}    {format_source}",
+        "format-muted": " ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 50,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+        "on-click" : "swaymsg \"[class=\\\"Spotify\\\"]\" focus",
+        "on-click-right": "playerctl play-pause"
+    }
+}

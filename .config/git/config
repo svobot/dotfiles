@@ -1,0 +1,38 @@
+[user]
+	name = Tomáš Svoboda
+	email = svoboda@posteo.net
+[github]
+	user = svobot
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	safecrlf = true
+	commitGraph = true
+[protocol]
+	version = 2
+[color]
+	ui = true
+[log]
+	date = iso-local
+[alias]
+	c = commit
+	s = status --short
+	st = status
+
+  lg = log -n 20 --abbrev-commit --graph --decorate --pretty=format:\"%C(auto)%h%C(auto)%d %C(auto)%s -%C(blue) %cd\" --date=human
+	last = log -1 HEAD
+	f = push --force-with-lease
+  sl = stash list
+  meld = difftool --dir-diff --tool=meld
+[push]
+	default = simple
+[credential]
+  helper = cache
+
+[merge]
+  tool = nvim -d
+[diff]
+  algorithm = patience
+  compactionHeuristic = true
+[difftool.meld]
+  cmd = meld .

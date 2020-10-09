@@ -1,0 +1,14 @@
+CLUTTER_BACKEND=wayland
+MOZ_ENABLE_WAYLAND=1
+XKB_DEFAULT_LAYOUT=gb
+
+TIME_STYLE=long-iso
+
+EDITOR=nvim
+BAT_THEME=base16-256
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/home/svoboda/.local/bin
+
+_JAVA_AWT_WM_NONREPARENTING=1
+
+RUST_BACKTRACE=full
