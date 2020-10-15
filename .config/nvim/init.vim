@@ -198,8 +198,7 @@ set listchars+=trail:·          " │ Use custom symbols to
 set listchars+=extends:»        " │ represent invisible characters
 set listchars+=precedes:«       " │
 set listchars+=nbsp:¬           " │
-" set showbreak=↪               " │
-set showbreak=￫                 " ┘
+set showbreak=↪                 " ┘
 
 set scrolloff=5                " Minumum lines to keep above and below
                                " from the cursor
