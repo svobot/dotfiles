@@ -2,11 +2,11 @@
 {
     "layer": "top",
     "height": 25,
-    
+
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
     "modules-right": ["tray", "pulseaudio", "network#internet", /*"network#vpn",*/ "battery", "clock", "custom/power"],
-    
+
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -31,9 +31,9 @@
         "spacing": 10
     },
     "clock": {
-	"interval" : 1,
+        "interval" : 1,
         "format": "{:%A    %Y-%m-%d    %X}",
-	"tooltip-format": "<big>{:%B}</big>\n<span font-family=\"IBM Plex Mono\">{calendar}</span>"
+        "tooltip-format": "<big>{:%B}</big>\n<span font-family=\"IBM Plex Mono\">{calendar}</span>"
     },
     "battery": {
         "states": {
