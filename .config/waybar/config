@@ -91,6 +91,6 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
         "on-click" : "swaymsg \"[class=\\\"Spotify\\\"]\" focus",
-        "on-click-right": "playerctl play-pause"
+        "on-click-right": "playerctl -p spotify play-pause"
     }
 }

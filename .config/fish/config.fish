@@ -11,6 +11,11 @@ else
   abbr -a lla 'ls -la'
 end
 
+if command -v swaymsg > /dev/null
+  abbr -a ken 'swaymsg input type:keyboard xkb_switch_layout 0'
+  abbr -a kcz 'swaymsg input type:keyboard xkb_switch_layout 1'
+end
+
 set fish_greeting
 
 #set PATH ~/.config/bin ~/.local/bin $PATH
