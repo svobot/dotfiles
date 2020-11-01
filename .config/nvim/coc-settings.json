@@ -1,6 +1,18 @@
 {
-  "suggest.disableMenuShortcut": true,
+  "diagnostic.highlightOffset": 100,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextPrefix": "← ",
+  "diagnostic.virtualTextLines": 1,
+  "diagnostic.errorSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.hintSign": "",
+  "codeLens.enable": true,
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.formatOnSaveFiletypes": ["rust", "haskell", "lhaskell"],
+
+  "suggest.disableMenuShortcut": true,
   "languageserver": {
     "haskell": {
       //"command": "hie-wrapper",

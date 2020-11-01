@@ -200,36 +200,36 @@ set listchars+=precedes:«       " │
 set listchars+=nbsp:¬           " │
 set showbreak=↪                 " ┘
 
-set scrolloff=5                " Minumum lines to keep above and below
-                               " from the cursor
-set sidescroll=1               " Scroll sideways a character at a time,
-                               " rather than a screen at a time
-set sidescrolloff=5            " Minumum lines to keep left and right from the cursor
+set scrolloff=5                 " Minumum lines to keep above and below
+                                " from the cursor
+set sidescroll=1                " Scroll sideways a character at a time,
+                                " rather than a screen at a time
+set sidescrolloff=5             " Minumum lines to keep left and right from the cursor
 
-set report=0                   " Always report changed lines
+set report=0                    " Always report changed lines
 
-set splitright                 " Open new vsplit windows to the right of the current one
-set splitbelow                 " Open new split windows to the bottom of the current one
+set splitright                  " Open new vsplit windows to the right of the current one
+set splitbelow                  " Open new split windows to the bottom of the current one
 
-set noerrorbells               " ┐
-set novisualbell               " │ No annoying sound
-set t_vb=                      " │ on errors
-set tm=500                     " ┘
+set noerrorbells                " ┐
+set novisualbell                " │ No annoying sound
+set t_vb=                       " │ on errors
+set tm=500                      " ┘
 
-au VimResized * :wincmd =      " Resize splits when the window is resized
+au VimResized * :wincmd =       " Resize splits when the window is resized
 
-set magic                      " For regular expressions turn magic on
+set magic                       " For regular expressions turn magic on
 
-set showmatch                  " Show matching brackets when text indicator
-                               " is over them
+set showmatch                   " Show matching brackets when text indicator
+                                " is over them
 
-set nrformats-=octal           " Interpret numbers with leading zeroes as
-                               " decimal, not octal
-set iskeyword+=-               " Makes foo-bar considered one word
+set nrformats-=octal            " Interpret numbers with leading zeroes as
+                                " decimal, not octal
+set iskeyword+=-                " Makes foo-bar considered one word
 
-set display=lastline           " Show as much as possible of the last line
+set display=lastline            " Show as much as possible of the last line
 
-set spelllang=en               " Set spelling language
+set spelllang=en                " Set spelling language
 
 " ==============================================================================
 " FILES, BACKUPS AND UNDO
@@ -251,10 +251,10 @@ set undofile                    " ┘ undo
 " SEARCH
 " ==============================================================================
 
-set ignorecase                 " Case insensitive search
-set smartcase                  " ... except if we input a capital letter
-set hlsearch                   " Highlight search terms
-set hlsearch                   " Find as you type search
+set ignorecase                  " Case insensitive search
+set smartcase                   " ... except if we input a capital letter
+set hlsearch                    " Highlight search terms
+set hlsearch                    " Find as you type search
 
 " `<Leader>+n` -- Disable highlight
 nmap <silent> <Leader>n :silent :nohlsearch<CR>
@@ -263,17 +263,17 @@ nmap <silent> <Leader>n :silent :nohlsearch<CR>
 " TABS, SPACES, INDENTS AND WRAPPING
 " ==============================================================================
 
-set wrap                       " Wrap lines
-set linebreak                  " Break at 'breakat' characters
-set nojoinspaces               " No extra spaces when joining lines
-set autoindent                 " Indent at the same level of the previous line
-set expandtab                  " Use spaces instead of tabs
-set smarttab                   " Smart tab
-set smartindent                " Automatically indent lines after opening brackets
+set wrap                        " Wrap lines
+set linebreak                   " Break at 'breakat' characters
+set nojoinspaces                " No extra spaces when joining lines
+set autoindent                  " Indent at the same level of the previous line
+set expandtab                   " Use spaces instead of tabs
+set smarttab                    " Smart tab
+set smartindent                 " Automatically indent lines after opening brackets
 
-set softtabstop=2              " ┐
-set shiftwidth=2               " │ 1 tab == 2 spaces
-set tabstop=2                  " ┘
+set softtabstop=2               " ┐
+set shiftwidth=2                " │ 1 tab == 2 spaces
+set tabstop=2                   " ┘
 
 " ==============================================================================
 " KEYBOARD SHORTCUTS

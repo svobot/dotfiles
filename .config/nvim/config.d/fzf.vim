@@ -7,10 +7,10 @@ noremap <Leader>s :Rg<CR>
 
 let g:fzf_layout = { 'down': '~20%' }
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow -g "!{.git,node_modules}/*" 2>/dev/null'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow -g "!{.git,.stack-work}/*" 2>/dev/null'
 
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always --smart-case -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
