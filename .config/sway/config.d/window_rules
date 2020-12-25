@@ -1,6 +1,7 @@
 ## Window rules configuration:
 
-for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, resize set 576 324, move position 1344 731, sticky enable
+for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, resize set 576 324, move position 1957 1070, sticky enable
 for_window [app_id="firefox" title="^Library$"] floating enable
 
-for_window [app_id="pavucontrol" title="^Volume Control$"] floating enable
+for_window [app_id="pavucontrol" title="^Volume Control$"] floating enable, resize set 655 615, move position center
+

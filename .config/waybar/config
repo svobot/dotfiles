@@ -36,22 +36,22 @@
         "tooltip-format": "<big>{:%B}</big>\n<span font-family=\"IBM Plex Mono\">{calendar}</span>"
     },
     "battery": {
+        "full-at": 97,
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}%  {icon}",
-        "format-charging": "{capacity}%  <span foreground=\"#26A65B\"></span>",
+        "format-charging": "{capacity}%  <span foreground=\"#26A65B\">􀢋</span>",
         "format-plugged": "",
         "format-alt": "{time}  {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["􀛪", "􀛩", "􀛨"]
     },
     "network#internet": {
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-linked": "",
-        "format-disconnected": "⚠",
+        "format-wifi": "􀙇",
+        "format-ethernet": "􀉣",
+        "format-linked": "􀜡",
+        "format-disconnected": "􀇿",
         "tooltip-format-wifi": "{essid}:\t{signalStrength}%\n{ifname}:\t{ipaddr}/{cidr}",
         "tooltip-format-ethernet": "{ifname}:   {ipaddr}/{cidr}",
         "tooltip-format-disconnected": "Disconnected"
@@ -63,30 +63,28 @@
 //        "tooltip-format": "{ifname}:   {ipaddr}/{cidr}"
 //    },
     "pulseaudio": {
-        "format": "{volume}%  {icon}  {format_source}",
-        "format-bluetooth": "{volume}%  {icon}    {format_source}",
-        "format-bluetooth-muted": "   {icon}    {format_source}",
-        "format-muted": " ",
-        "format-source": "{volume}% ",
+        "format": "{volume}%  {icon}{format_source}",
+        "format-bluetooth": "{volume}%  {icon}  􀑛{format_source}",
+        "format-bluetooth-muted": "􀊣  {icon}  􀑛{format_source}",
+        "format-muted": "􀊣",
+        "format-source": "  {volume}%  􀊱",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "􀑈",
+            "hands-free": "􀑈",
+            "headset": "􀑈",
+            "default": ["􀊡", "􀊥", "􀊧", "􀊩"]
         },
         "on-click": "pavucontrol"
     },
     "custom/media": {
+        "icon-size": 25,
         "format": "{icon} {}",
         "return-type": "json",
         "max-length": 50,
         "format-icons": {
-            "spotify": "",
-            "default": "🎜"
+            "spotify": "<span font-size=\"large\" foreground=\"#66CC99\"></span> ",
+            "default": "􀑩"
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name

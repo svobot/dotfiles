@@ -1,7 +1,6 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "SF Pro Display", "Font Awesome 5 Free";
     font-weight: 600;
     font-size: 13px;
@@ -9,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     color: #ffffff;
 }
 
@@ -31,10 +30,6 @@ window#waybar {
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
 }
 
 #clock,
@@ -78,24 +73,14 @@ label:focus {
 }
 
 #network.internet.disconnected {
-    background-color: #f53c3c;
+    color: #eb4d4b;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    color: rgba(255, 255, 255, 0.5);
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
 #tray {
-    background-color: #2980b9;
 }
 

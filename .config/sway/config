@@ -24,7 +24,7 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/svoboda/.config/wallpaper/clouds.jpg fill
+output * bg /home/svoboda/.config/wallpaper/mars.jpg fill
 #
 # Example configuration:
 #
@@ -177,7 +177,7 @@ output * bg /home/svoboda/.config/wallpaper/clouds.jpg fill
 #
 # Resizing containers:
 #
-mode "resize" {
+mode "􀅊" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -197,7 +197,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "􀅊"
 
 #
 # Status Bar:
